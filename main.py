@@ -56,17 +56,18 @@ class RSP_Game:
         elif self.user_pick == '가위' and computer_pick == '보' or \
         self.user_pick == '바위' and computer_pick == '가위' or \
         self.user_pick == '보' and computer_pick == '바위':
-            if user_answer == '이겼다':
-                win()
-            else:
-                defeat()
-
-        else:
             if user_answer == '졌다':
                 win()
             else:
                 defeat()
 
+        else:
+            if user_answer == '이겼다':
+                win()
+            else:
+                defeat()
+
+#게임 반복 실행
 while True:
 
     print("현재 점수는 " + str(score) + "점입니다.")
