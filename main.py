@@ -82,15 +82,15 @@ class RSP_Game:
             else:
                 defeat()
 
-#게임 처음 실행
-print("게임을 시작하시겠습니까?(Y/N) :", end = " ")
-isGameStart = input()
-
 #게임 반복 실행
 while True:
 
+    print("게임을 하시겠습니까?(Y/N) :", end = " ")
+    isGameStart = input()
+
     if isGameStart.upper() == 'Y':
         print("게임을 시작합니다.")
+        print("현재 점수는 " + str(score) + "점입니다.")
 
         game = RSP_Game()
         game.choose_RSP()
@@ -101,7 +101,3 @@ while True:
         break
     else:
         print("'Y'나 'N'을 입력해주세요.")
-
-    print("현재 점수는 " + str(score) + "점입니다.")
-    print("게임을 계속 하시겠습니까?(Y/N) :", end = " ")
-    isGameStart = input()
